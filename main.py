@@ -19,7 +19,7 @@ DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
 #     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
 #     return data
 
-stock_tickers = pd.read_csv('/Users/SpyJigu/Downloads/s&p500.csv')
+stock_tickers = pd.read_csv('s&p500.csv')
 MMM = yf.Ticker(stock_tickers['Symbol'][0])
 df = MMM.history(period = 'max')
 df.reset_index(inplace=True)
