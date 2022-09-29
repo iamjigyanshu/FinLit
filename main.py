@@ -51,9 +51,10 @@ fig.update_xaxes(
         ])
     )
 )
+st.plotly_chart(fig, use_container_width=True)
 # st.subheader('Number of pickups by hour')
 # hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
-st.bar_chart(fig)
+# st.bar_chart()
 
 # Some number in the range 0-23
 # hour_to_filter = st.slider('hour', 0, 23, 17)
