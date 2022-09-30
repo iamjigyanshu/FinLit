@@ -40,3 +40,10 @@ def app():
 	fig.update_layout(title_text="Closing Price Chart")
 	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(fig, use_container_width=True)
+	
+	volume_chart = px.area(df['Volume'], 
+                            title='Stock Daily Volume', 
+                            color_discrete_map={'Volume':'red'} , 
+                            width=800, height=400)
+	st.plotly_chart(volume_chart, use_container_width=True)
+# 	volume_chart.show()
