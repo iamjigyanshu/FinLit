@@ -20,7 +20,7 @@ def app():
 	st.subheader("About the Company")
 	st.write(sentence)
 	
-	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'],title="Close Price Chart")])
+	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
 	fig.update_xaxes(
 		rangeslider_visible=True,
 		rangeselector=dict(
@@ -37,5 +37,6 @@ def app():
 			])
 		)
 	)
+	fig.update_layout(title_text="Closing Price Chart")
 	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(fig, use_container_width=True)
