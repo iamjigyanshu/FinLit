@@ -2,13 +2,15 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import Analytics_test
+import FinLiteracy_Test
 import yfinance as yf
 import plotly.graph_objects as go
 
 
 
 PAGES = {
-    "Analytics": Analytics_test
+	"Analytics": Analytics_test,
+	"You Should Know":FinLiteracy_Test
 }
 
 
