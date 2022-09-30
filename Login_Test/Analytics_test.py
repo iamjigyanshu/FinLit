@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import yfinance as yf
 import plotly.graph_objects as go
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
 
 def app():
 	# s&p500.csv
@@ -40,6 +43,10 @@ def app():
 	fig.update_layout(title_text="Closing Price Chart")
 	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(fig, use_container_width=True)
+	
+	one_yrs_ago = datetime.now() - relativedelta(years=1)
+	date = one_yrs_ago.date()
+	
 	for i in df['Date']:
 		if i == date:
 			ans = df.loc[df['Date'] == i].index[0]
