@@ -20,8 +20,6 @@ def app():
 	st.subheader("About the Company")
 	st.write(sentence)
 	
-	st.write("\n")
-	st.subheader("Price Chart")
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['High'])])
 	fig.update_xaxes(
 		rangeslider_visible=True,
