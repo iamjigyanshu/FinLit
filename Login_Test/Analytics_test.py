@@ -71,5 +71,6 @@ def app():
 	    )
 	)
 	vol_chart.update_layout(title_text="Daily Volume Chart")
+	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(vol_chart, use_container_width=True)
-# 	volume_chart.show()
+
