@@ -72,9 +72,9 @@ def analytics():
 
 
 def main():
-	"""Simple Login App"""
+	"""FinLit"""
 
-	st.title("Simple Login App")
+	st.title("FinLit")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
