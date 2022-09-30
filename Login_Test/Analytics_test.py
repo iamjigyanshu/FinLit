@@ -20,7 +20,7 @@ def app():
 	st.subheader("About the Company")
 	st.write(sentence)
 	
-	fig = go.Figure([go.Scatter(x=df['Date'], y=df['High'])])
+	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'],title="Close Price Chart")])
 	fig.update_xaxes(
 		rangeslider_visible=True,
 		rangeselector=dict(
