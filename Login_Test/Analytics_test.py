@@ -33,4 +33,5 @@ def app():
 			])
 		)
 	)
+	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(fig, use_container_width=True)
