@@ -8,7 +8,8 @@ def app():
 	# s&p500.csv
 	ticker_list = pd.read_csv('s&p500.csv')
 	selected_stock = st.sidebar.selectbox('Stock', ticker_list)
-
+	stock_name = selected_stock.info['shortName']
+	st.title(f"Showing Analytics for {stock_name}")
 	stock_data = yf.Ticker(selected_stock)
 
 	df = stock_data.history(period='max')
