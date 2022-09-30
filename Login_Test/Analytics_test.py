@@ -15,6 +15,9 @@ def app():
 
 	df = stock_data.history(period='max')
 	df.reset_index(inplace=True)
+	
+	sentence = stock_data.info['longBusinessSummary']
+	st.write(sentence)
 
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['High'])])
 	fig.update_xaxes(
