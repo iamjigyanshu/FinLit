@@ -19,7 +19,8 @@ def app():
 	df = stock_data.history(period='max')
 	df.reset_index(inplace=True)
 	
-	sentence = stock_data.info['longBusinessSummary']
+# 	sentence = stock_data.info['longBusinessSummary']
+	sentence = '3M (originally the Minnesota Mining and Manufacturing Company) is an American multinational conglomerate operating in the fields of industry, worker safety, U.S. health care, and consumer goods.'
 	st.subheader("About the Company")
 	
 # 	st.write(sentence)
