@@ -49,6 +49,17 @@ def view_all_users():
 	data = c.fetchall()
 	return data
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://wallpaperaccess.com/full/1288325.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 def main():
 	placeholder = st.empty()
