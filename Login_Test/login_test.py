@@ -67,7 +67,7 @@ def main():
 
 		username = placeholder.sidebar.text_input("User Name")
 		password = placeholder.sidebar.text_input("Password",type='password')
-		if placeholder.sidebar.checkbox("Login"):
+		if st.sidebar.checkbox("Login"):
 			# if password == '12345':
 			create_usertable()
 			hashed_pswd = make_hashes(password)
