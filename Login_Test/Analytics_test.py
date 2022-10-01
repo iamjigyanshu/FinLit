@@ -16,7 +16,6 @@ def app():
 	stock_name = stock_data.info['shortName']
 	st.title(f"Showing Analytics for {stock_name}")
 	
-	string = st.text_area('Financial Ratios', height=275)
 	PE = round(stock_data.info['trailingPE'],2)
 	market_cap = round(stock_data.info['marketCap'],2)
 	market_cap = "{:,}".format(market_cap)
@@ -24,10 +23,8 @@ def app():
 	week_52_low = "{:,}".format(week_52_low)
 	week_52_high = round(stock_data.info['fiftyTwoWeekHigh'],2)
 	week_52_high = "{:,}".format(week_52_high)
-	st.write(f"PE(price to earning) : {PE} |")
-	st.write(f"Market Cap : ${market_cap} |")
-	st.write(f"52 Week Low : {week_52_low} |")
-	st.write(f"52 Week Low : {week_52_high} |")
+	st.write(f"PE(price to earning) : {PE} | Market Cap : ${market_cap}")
+	st.write(f"52 Week Low : {week_52_low} | 52 Week High : {week_52_high}")
 
 	df = stock_data.history(period='max')
 	df.reset_index(inplace=True)
