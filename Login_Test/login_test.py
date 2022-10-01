@@ -52,7 +52,6 @@ def view_all_users():
 
 def main():
 	placeholder = st.empty()
-	"""FinLit"""
 
 	st.title("FinLit")
 
