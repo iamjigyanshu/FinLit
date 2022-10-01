@@ -13,7 +13,7 @@ PAGES = {
 	"Analytics": Analytics_test,
 	"You Should Know":FinLiteracy_Test
 }
-image = Image.open('equity.jpeg')
+image = Image.open('Login_Test/equity.jpeg')
 
 st.set_page_config(page_title='FinLit', page_icon="💵")
 # Security
