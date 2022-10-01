@@ -7,12 +7,12 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 def human_format(num):
+    num = float('{:.3g}'.format(num))
     magnitude = 0
     while abs(num) >= 1000:
         magnitude += 1
         num /= 1000.0
-    # add more suffixes if you need them
-    return '%.2f%s' % (num, ['', 'K', 'M', 'G', 'T', 'P'][magnitude])
+    return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T'][magnitude])
 
 def app():
 	# s&p500.csv
