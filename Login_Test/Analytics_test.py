@@ -63,7 +63,7 @@ def app():
 		    low=df['Low'],
 		    close=df['Close'])])
 	fig.update_layout(
-	    title=stock_data.info['symbol'],
+	    title=f"Price Chart for {stock_data.info['symbol']}",
 	    xaxis_title="Date",
 	    yaxis_title="Price (USD)"
 	)
