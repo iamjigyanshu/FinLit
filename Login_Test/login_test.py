@@ -51,6 +51,7 @@ def view_all_users():
 
 
 def main():
+	placeholder = st.empty()
 	"""FinLit"""
 
 	st.title("FinLit")
@@ -62,7 +63,7 @@ def main():
 		st.subheader("Home")
 
 	elif choice == "Login":
-		st.subheader("Login Section")
+		placeholder.subheader("Login Section")
 
 		username = st.sidebar.text_input("User Name")
 		password = st.sidebar.text_input("Password",type='password')
@@ -73,7 +74,7 @@ def main():
 
 			result = login_user(username,check_hashes(password,hashed_pswd))
 			if result:
-
+				placeholder.empty()
 				st.success("Logged In as {}".format(username))
 
 				#task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
