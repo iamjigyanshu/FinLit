@@ -14,7 +14,7 @@ PAGES = {
 }
 
 
-
+st.set_page_config(page_title=’FinLit’, page_icon=”💵”)
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
