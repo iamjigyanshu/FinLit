@@ -23,7 +23,7 @@ def app():
 	sentence = '3M (originally the Minnesota Mining and Manufacturing Company) is an American multinational conglomerate operating in the fields of industry, worker safety, U.S. health care, and consumer goods.'
 	st.subheader("About the Company")
 	
-# 	st.write(sentence)
+	st.write(sentence)
 	
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
 	fig.update_xaxes(
