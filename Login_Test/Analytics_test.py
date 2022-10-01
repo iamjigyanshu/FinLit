@@ -42,8 +42,14 @@ def app():
 	st.write(sentence)
 	
 	st.subheader("Financial Ratios")
-# 	label = "Market Cap"
-	st.metric(label="Market Cap", market_cap, delta=None, delta_color="normal", help=None)
+	label_1 = "Market Cap"
+	st.metric(label_1, market_cap, delta=None, delta_color="normal", help=None)
+	label_2 = "PE Ratio"
+	st.metric(label_2, PE, delta=None, delta_color="normal", help=None)
+	label_3 = "52 Week High"
+	st.metric(label_3, week_52_high, delta=None, delta_color="normal", help=None)
+	label_4 = "52 Week Low"
+	st.metric(label_4, week_52_low, delta=None, delta_color="normal", help=None)
 	
 	
 	
