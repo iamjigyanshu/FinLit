@@ -71,8 +71,8 @@ def main():
 	elif choice == "Login":
 		
 		placeholder.subheader("Login Section")
-		placeholder.write("Risk is a part of God's game, alike for men and nations.")
-		placeholder.write("∽Warren Buffett")
+		placeholder.write("""Risk is a part of God's game, alike for men and nations.
+		∽Warren Buffett""")
 		
 		
 		username = st.sidebar.text_input("User Name")
