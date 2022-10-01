@@ -65,8 +65,8 @@ def main():
 	elif choice == "Login":
 		placeholder.subheader("Login Section")
 
-		username = placeholder.sidebar.text_input("User Name")
-		password = placeholder.sidebar.text_input("Password",type='password')
+		username = st.sidebar.text_input("User Name")
+		password = st.sidebar.text_input("Password",type='password')
 		if st.sidebar.checkbox("Login"):
 			# if password == '12345':
 			create_usertable()
