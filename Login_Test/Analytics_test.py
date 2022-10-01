@@ -21,6 +21,7 @@ def app():
 	
 	sentence = stock_data.info['longBusinessSummary']
 	st.subheader("About the Company")
+	
 	st.write(sentence)
 	
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
