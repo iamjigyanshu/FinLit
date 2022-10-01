@@ -30,8 +30,7 @@ def app():
 	week_52_low = "{:,}".format(week_52_low)
 	week_52_high = round(stock_data.info['fiftyTwoWeekHigh'],2)
 	week_52_high = "{:,}".format(week_52_high)
-	st.write(f"PE(price to earning) : {PE} | Market Cap : ${market_cap}")
-	st.write(f"52 Week Low : {week_52_low} | 52 Week High : {week_52_high}")
+	
 
 	df = stock_data.history(period='max')
 	df.reset_index(inplace=True)
@@ -41,6 +40,11 @@ def app():
 	st.subheader("About the Company")
 	
 	st.write(sentence)
+	
+	st.subheader("Financial Ratios")
+	
+	st.write(f"PE(price to earning) : {PE}  |  Market Cap : ${market_cap}")
+	st.write(f"52 Week Low : {week_52_low}  |  52 Week High : {week_52_high}")
 	
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
 	fig.update_xaxes(
