@@ -5,7 +5,7 @@ import Analytics_test
 import FinLiteracy_Test
 import yfinance as yf
 import plotly.graph_objects as go
-from PIL import Image
+
 
 
 
@@ -13,7 +13,7 @@ PAGES = {
 	"Analytics": Analytics_test,
 	"You Should Know":FinLiteracy_Test
 }
-image = Image.open('Login_Test/equity.jpeg')
+
 
 st.set_page_config(page_title='FinLit', page_icon="💵")
 # Security
@@ -50,17 +50,8 @@ def view_all_users():
 	data = c.fetchall()
 	return data
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://wallpaperaccess.com/full/1288325.jpg");
-background-size: cover;
-}
-</style>
-'''
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
+df = px.data.gapminder()
 
 def main():
 	placeholder = st.empty()
@@ -72,10 +63,18 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		st.image(image, caption=' ')
+		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
+           	size="pop", color="continent", hover_name="country",
+           	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
+
 
 	elif choice == "Login":
+		
 		placeholder.subheader("Login Section")
+		
+		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
+           	size="pop", color="continent", hover_name="country",
+           	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
 
 		username = st.sidebar.text_input("User Name")
 		password = st.sidebar.text_input("Password",type='password')
@@ -102,7 +101,13 @@ def main():
 
 
 	elif choice == "SignUp":
+		
 		st.subheader("Create New Account")
+		
+		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
+           	size="pop", color="continent", hover_name="country",
+           	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
+		
 		new_user = st.text_input("Username")
 		new_password = st.text_input("Password",type='password')
 		n = len(new_password)
