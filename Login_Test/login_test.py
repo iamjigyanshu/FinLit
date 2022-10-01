@@ -5,6 +5,7 @@ import Analytics_test
 import FinLiteracy_Test
 import yfinance as yf
 import plotly.graph_objects as go
+from PIL import Image
 
 
 
@@ -12,7 +13,7 @@ PAGES = {
 	"Analytics": Analytics_test,
 	"You Should Know":FinLiteracy_Test
 }
-
+image = Image.open('equity.jpeg')
 
 st.set_page_config(page_title='FinLit', page_icon="💵")
 # Security
@@ -71,6 +72,7 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
+		st.image(image, caption='Sunrise by the mountains')
 
 	elif choice == "Login":
 		placeholder.subheader("Login Section")
