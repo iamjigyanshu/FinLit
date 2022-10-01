@@ -42,11 +42,10 @@ def app():
 	st.write(sentence)
 	
 	st.subheader("Financial Ratios")
-	label = "Market Cap"
-	st.metric(label, market_cap, delta=None, delta_color="normal", help=None)
+# 	label = "Market Cap"
+	st.metric(label="Market Cap", market_cap, delta=None, delta_color="normal", help=None)
 	
-	st.write(f"PE(price to earning) : {PE}  |  Market Cap : ${market_cap}")
-	st.write(f"52 Week Low : {week_52_low}  |  52 Week High : {week_52_high}")
+	
 	
 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
 	fig.update_xaxes(
