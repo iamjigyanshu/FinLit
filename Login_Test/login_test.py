@@ -64,8 +64,8 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		
-		placeholder.write("Risk is a part of God's game, alike for men and nations.")
-		placeholder.write("∽Warren Buffett")
+		st.write("Risk is a part of God's game, alike for men and nations.")
+		st.write("∽Warren Buffett")
 
 
 	elif choice == "Login":
