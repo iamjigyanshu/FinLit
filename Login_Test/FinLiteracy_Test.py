@@ -5,5 +5,6 @@ import yfinance as yf
 import plotly.graph_objects as go
 
 def app():
-    st.title("Learn to generate passive income...")
+    st.title("Learn to generate passive income")
+    st.subheader("Coming Soon...")
     
