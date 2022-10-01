@@ -64,15 +64,15 @@ def main():
 	if choice == "Home":
 		st.subheader("Home")
 		
-		st.write("Risk is a part of God's game, alike for men and nations.")
-		st.write("∽Warren Buffett")
+		placeholder.write("Risk is a part of God's game, alike for men and nations.")
+		placeholder.write("∽Warren Buffett")
 
 
 	elif choice == "Login":
 		
 		placeholder.subheader("Login Section")
-		st.write("Risk is a part of God's game, alike for men and nations.")
-		st.write("∽Warren Buffett")
+		placeholder.write("Risk is a part of God's game, alike for men and nations.")
+		placeholder.write("∽Warren Buffett")
 		
 		
 		username = st.sidebar.text_input("User Name")
