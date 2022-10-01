@@ -101,19 +101,15 @@ def main():
 	elif choice == "SignUp":
 		st.subheader("Create New Account")
 		new_user = st.text_input("Username")
-		boo = True
-		while (boo):
-			new_password = st.text_input("Password",type='password')
-			if len(new_password) >= 6:
-				boo = False
-			else:
-				st.warning("Password should contain 6 or more characters")
-
-		if st.button("Signup"):
+		new_password = st.text_input("Password",type='password')
+		n = len(new_password)
+		if st.button("Signup") and n>=6:
 			create_usertable()
 			add_userdata(new_user,make_hashes(new_password))
 			st.success("You have successfully created a valid Account")
 			st.info("Go to Login Menu to login")
+		else:
+			st.warning("Password should contain 6 or more characters")
 
 
 
