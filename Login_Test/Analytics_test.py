@@ -6,6 +6,13 @@ import plotly.graph_objects as go
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
+def human_format(num):
+    magnitude = 0
+    while abs(num) >= 1000:
+        magnitude += 1
+        num /= 1000.0
+    # add more suffixes if you need them
+    return '%.2f%s' % (num, ['', 'K', 'M', 'G', 'T', 'P'][magnitude])
 
 def app():
 	# s&p500.csv
@@ -18,7 +25,7 @@ def app():
 	
 	PE = round(stock_data.info['trailingPE'],2)
 	market_cap = round(stock_data.info['marketCap'],2)
-	market_cap = "{:,}".format(market_cap)
+	market_cap = human_format(market_cap)
 	week_52_low = round(stock_data.info['fiftyTwoWeekLow'],2)
 	week_52_low = "{:,}".format(week_52_low)
 	week_52_high = round(stock_data.info['fiftyTwoWeekHigh'],2)
