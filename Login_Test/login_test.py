@@ -73,6 +73,7 @@ def main():
 
 			result = login_user(username,check_hashes(password,hashed_pswd))
 			if result:
+				st.sidebar.empty()
 				placeholder.empty()
 				st.success("Logged In as {}".format(username))
 
