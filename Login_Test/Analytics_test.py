@@ -21,7 +21,7 @@ def app():
 		PE = round(stock_data.info['trailingPE'],2)
 		market_cap = round(stock_data.info['marketCap'],2)
 		market_cap = "{:,}".format(market_cap)
-		week_52_low = round(stock_data.info['fiftyTwoWeeklow'],2)
+		week_52_low = round(stock_data.info['fiftyTwoWeekLow'],2)
 		week_52_low = "{:,}".format(week_52_low)
 		week_52_high = round(stock_data.info['fiftyTwoWeekHigh'],2)
 		week_52_high = "{:,}".format(week_52_low)
