@@ -53,7 +53,7 @@ def view_all_users():
 def main():
 	placeholder = st.empty()
 
-	st.title("FinLit")
+	st.sidebar.title("FinLit")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
