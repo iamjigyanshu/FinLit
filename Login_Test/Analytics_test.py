@@ -72,7 +72,7 @@ def app():
 # 			])
 # 		)
 # 	)
-	fig = go.Figure(data=[go.Candlestick(x=df.index,
+	fig = go.Figure(data=[go.Candlestick(x=df['Date'],
 		    open=df['Open'],
 		    high=df['High'],
 		    low=df['Low'],
