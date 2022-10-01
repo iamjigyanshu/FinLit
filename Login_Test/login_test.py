@@ -72,7 +72,7 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		st.image(image, caption='Sunrise by the mountains')
+		st.image(image, caption=' ')
 
 	elif choice == "Login":
 		placeholder.subheader("Login Section")
