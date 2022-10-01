@@ -56,22 +56,7 @@ def app():
 	
 	
 # 	fig = go.Figure([go.Scatter(x=df['Date'], y=df['Close'])])
-# 	fig.update_xaxes(
-# 		rangeslider_visible=True,
-# 		rangeselector=dict(
-# 			buttons=list([
-# 				dict(count=1, label="1m", step="month",
-# 					 stepmode="backward"),
-# 				dict(count=6, label="6m", step="month",
-# 					 stepmode="backward"),
-# 				dict(count=1, label="YTD", step="year",
-# 					 stepmode="todate"),
-# 				dict(count=1, label="1y", step="year",
-# 					 stepmode="backward"),
-# 				dict(step="all")
-# 			])
-# 		)
-# 	)
+
 	fig = go.Figure(data=[go.Candlestick(x=df['Date'],
 		    open=df['Open'],
 		    high=df['High'],
@@ -81,6 +66,22 @@ def app():
 	    title=stock_data.info['symbol'],
 	    xaxis_title="Date",
 	    yaxis_title="Price (USD)"
+	)
+	fig.update_xaxes(
+		rangeslider_visible=True,
+		rangeselector=dict(
+			buttons=list([
+				dict(count=1, label="1m", step="month",
+					 stepmode="backward"),
+				dict(count=6, label="6m", step="month",
+					 stepmode="backward"),
+				dict(count=1, label="YTD", step="year",
+					 stepmode="todate"),
+				dict(count=1, label="1y", step="year",
+					 stepmode="backward"),
+				dict(step="all")
+			])
+		)
 	)
 	fig.update_layout(xaxis=dict(rangeselector = dict(font = dict( color = "black"))))
 	st.plotly_chart(fig, use_container_width=True)
