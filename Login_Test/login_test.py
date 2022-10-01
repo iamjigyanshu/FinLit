@@ -63,9 +63,10 @@ def main():
 
 	if choice == "Home":
 		st.subheader("Home")
-		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
+		fig = px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
            	size="pop", color="continent", hover_name="country",
            	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
+		st.plotly_chart(fig, use_container_width=True)
 
 
 	elif choice == "Login":
@@ -75,7 +76,7 @@ def main():
 		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
            	size="pop", color="continent", hover_name="country",
            	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
-
+		st.plotly_chart(fig, use_container_width=True)
 		username = st.sidebar.text_input("User Name")
 		password = st.sidebar.text_input("Password",type='password')
 		
@@ -104,9 +105,6 @@ def main():
 		
 		st.subheader("Create New Account")
 		
-		px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
-           	size="pop", color="continent", hover_name="country",
-           	log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
 		
 		new_user = st.text_input("Username")
 		new_password = st.text_input("Password",type='password')
