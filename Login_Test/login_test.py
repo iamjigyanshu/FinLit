@@ -97,6 +97,10 @@ def main():
 
 		username = st.sidebar.text_input("User Name")
 		password = st.sidebar.text_input("Password",type='password')
+		if len(password) >=6:
+			boo = False
+		else:
+			st.warning("Password should contain 6 or more characters")
 		if st.sidebar.checkbox("Login"):
 			# if password == '12345':
 			create_usertable()
